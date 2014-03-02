@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301160059) do
+ActiveRecord::Schema.define(version: 20140302071840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140301160059) do
     t.string   "assetable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "assetable_scope"
   end
 
   add_index "assets", ["assetable_id", "assetable_type"], name: "index_assets_on_assetable_id_and_assetable_type", using: :btree
